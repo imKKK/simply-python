@@ -1,0 +1,1149 @@
+
+
+
+
+	 						Python
+
+	 	Python is a general  purpose language.It has been used in various feilds..
+	Fields:
+		1.Web Development.
+		2.Games
+		3.Data science
+		4.Machine learning.
+		5.Complex computing
+		6.App developoment
+		7.Analatycs
+					      Installation
+
+	Install Python.exe from "python.org/downloads"
+	Install Pycharm IDE for python or Eclipse,NetBeans IDE.
+	Run Cmd..
+		>python
+		--"start programming"--
+		
+						WORKING
+	
+		Python is a Dynamically typed language,hence no need to Declare Data types for any Variables....
+	as like you assign a value to the variable it automatically senses that data type..However for getting inputs,
+	It always considers the input values as String..So, you may neeed to typecast everytime you getting the input 
+	value from the user...
+
+	Typecasting:
+
+		In Python the typecasting is done by 
+		int("input value")
+		float("input value")
+		str("input value")
+
+	Comments:
+
+		The python uses the "#" for comments,However it is single lines comments and not multi line comments..
+	
+			#the variable gets the a value
+
+		Docstring:
+		Python has a special set of strings for the multiline comment interface..
+	
+			"""
+			the variable gets the a value
+			"""
+	Variable Declaration:
+
+		In python we dont need to declare the data types..no need of semicolons, just a new line.....
+		
+		x=15
+		y=10
+		z=x+y
+		print(z) //prints 25.
+
+	Variable Names:
+
+		A variable name must start with _ or alphabetic...it shouldn't start with number...
+
+	Numeric Types:
+
+		Python has three numeric types..
+		Int
+		Float
+		Complex..
+
+							String:
+
+		Python has variuos methods for string operation.Here the strings can be accesed by various methods..
+	
+		"HELLO WORLD"	
+		'HELLO WORLD'
+	both are same...
+		we can declare  strings with either " " or ' ' ...both are same...
+
+	Example::
+		x="hello world"
+		print(x) // prints hello world
+
+		y='hello world'
+		print(y) // prints hello world
+
+	String functions::
+
+	Some of the string functions are....
+	
+	strip() 
+	//to remove the white spaces...
+	example:
+	x=" welcome "
+	print(x.strip())  //prints "welcome"
+
+	split() 
+	//to split the string based on conditions..
+	//to split a string...
+	example:
+	x="welcome"
+	print(x.split("l"))  //prints ["we","come"]
+
+	len()
+	//to find the length of the string...
+	example:
+	x="welcome"
+	print(len(x))  //prints 7
+
+	upper()
+	//converts to uppercase
+	exaple:
+	x="welcome"
+	print(x.upper())  //prints "WELCOME"
+
+	lower()
+	//converts to lowercase
+	example:
+	x="WELCOME"
+	print(x.lower())  //prints "welcome"
+
+	replace()
+	//replaces a character in the string with the given string
+	example:
+	x="welcome"
+	print(x.replace("w","b"))  //prints "belcome"
+
+ 	 to print a particular character at a particular position we use 
+		x='welcome'
+		print(x[2])  //prints 'l'
+	
+ 	 to print certain characters from a point to another point we use
+		x='welcome'
+		print(x[1:3])  //prints 'elco'
+	
+
+						Operators
+
+	python has several operators::
+
+	1.arithmetic operators
+
+	//python arithmetic operators are..
+	+ addition
+	- substraction
+	/ division
+	* multiplication
+	% modulas
+	//floor division
+	**exponential
+
+	2.assignment operators
+
+	= , += , -=, *= , /=, //=, **= , %=, &=, |=, <<=, >>=
+
+	3.comparision operators
+
+	== , !=, >, <, >=, <=
+
+	4.logical operators
+
+	and, or, not
+
+	5.membership operators
+
+	in, not in //returns true if some specialiased sequence of x in y
+
+	6.identity operators
+
+	is , is not //returns true if x is y, x is not y..
+
+	7.bitwise operators...
+
+	&, |, ~ , ^ , >> , <<
+
+
+
+					Python Collections
+
+	   		There are four collections are available in python..
+
+	
+	1.list
+
+		List is a collection which is
+		1.ordered
+		2.changeable
+		3.duplicate members are allowed.
+
+			In Python Lists are written with square brackets...
+	example:
+	
+	x=["apple","banana","orange"]
+	print(x) //prints ['apple','banana','orange']
+
+	The list() constructor:::
+	
+		we can also use the list() to create and acccess a list...
+	example:
+	x=list(("banana","cherry","mango"))
+	
+
+	append()::
+		to append or add or join a data..
+	
+	   example:
+		x=list(("apple","banana","orange"))
+		x.append("rose")  	//adds 'rose'
+		print(x)  		//prints ['apple','banana','orange','rose']
+
+	clear() -- x.clear() clears the list..
+	
+	extend() -- y=list(("apple","orange"))--
+		 -- x=list(("apple","mango"))--
+		 -- x.extend(y) 	// joins the entire list with x..
+		 -- print(x)		//prints ['apple','orange','apple','mango']
+
+	copy() -- z=y.copy() 		//copy y's contents to z
+
+	reverse() 			//reverses a list
+	
+	count() --print(x.count("apple")) // prints 1 //counts the specified element occurances..
+
+	index() -- prints the index of spcified element on its first occurance... // print(x.index("apple")) //prints 0
+
+	insert() -- inserts elements in a specified position..
+	  example: x.insert(0,"mango") //inserts mango at position 0
+
+	remove()::
+		to remove a particular data from the list..
+	example:
+		x=list(("apple","banana","orange"))
+		x.remove("apple")  	//removes 'apple'
+		print(x)  		//prints ['banana','orange']
+
+		or
+
+		x.remove(x[0])		//removes 'apple'
+		print(x)  		//prints ['banana','orange']
+
+	pop() -- removes a position spcified element from list.. 
+		x.pop(5)	  	// removes apple
+	
+	sort() -- sorts a list Assending order by default...
+		arguments:	reverse=True|False
+				key=function
+		example:
+			x.sort()  	//sorts the list assending order //by default reverse=False
+			x.sort(reverse=True) //sorts dessending order
+			x.sort(key=fun)  //sorts based the function result
+
+	
+
+
+	2.tuple
+
+		Tuple is a collection which is
+		1.ordered
+		2.non changeable
+		3.duplicate members are allowed
+
+			In python tuples are written with round brackets()
+	
+		Tuple elements are unchangable..They are stable as you create them ..they cant be modified or changed in python like constant..
+		
+		we cant perform remove,append,reverse,sort(),pop() anything....
+
+	Tuple() constructor::
+
+		x=tuple(("car","bike","van"))
+		print(x) 		//prints x elements
+
+	len()   //prints the length of the tuple..
+
+		tuple elements are unchanged...
+
+
+
+
+	3.set
+		set is a collection which is
+		1.unordered 
+		2.un indexed
+		3.No duplicate members are allowed
+
+			in python sets are written with curly brackets { }
+
+		x={"apple","orange","mango"}
+		print(x) 		// {'mango','apple','orange'} prints the elements randomly since it is unordered..
+		
+		Unordered and Unindexed...No duplicate members re allowed..
+	
+	set() :: constructor
+		
+		the set() constructor is used with round brackets
+		
+		x=set(("apple","banana","car"))
+		print(x)  		//prints the elements..
+	
+	add()::
+		it is used to add any elements to the sets..
+		
+		x.add("mango")
+		print(x)  		//prints {'apple','banana','car','mango'}
+
+	remove()::
+		removes any element..if the removing element is not in the list it throws an "KeyError"
+
+		x.remove("mango")
+		print(x)  		//prints {'apple','banana','car'}
+
+	len()::
+		to check the length
+
+		y=len(x)
+		print(y)  		//prints 3
+
+	copy()::
+		copies the elements to another variable
+ 	
+		y=x.copy();
+	
+	discard()::
+		used to remove any elements...if deleting element is not in the list it does nothing.
+
+		x.discard('mango')	//deletes the element
+
+	clear()::
+		clears the entire set
+
+
+
+
+
+	4.dictionary
+
+		Dictionary is a collection which is
+		1.unordered
+		2.changeable and indexed
+		3.No duplicate members are allowed..
+
+			in python dictionaries are written with curley brackets { }
+			it has keys and values
+
+		example:
+
+			x={"car":"four_wheels","bike":"two_wheels":"flight":"three_wheels"}
+			print(x) 	//prints the elements
+
+	dict():: constructor
+		
+		x=dict(car="four_wheel",bike="two_wheel",train="n_wheels")
+		print(x) 		//prints the elements
+
+	 	to an element---	
+	
+	 	x["auto"]="three_wheels"
+	
+	del()::
+
+		to remove an item...
+		
+		del(x["auto"])  	//deletes the auto entry
+
+	len()::
+	
+		to find the length
+	
+		print(len(x)) 		//prints the length
+
+
+
+
+
+						Python Conditions
+
+
+
+
+		in all the python conditions we should use a colon (:) at the end to specify its a condition.
+		and we need to give indentation to the next line of code under all the consitional statements.
+
+		EX::
+			if a>b:
+			    print(a)
+	
+
+	if Statement:
+
+		in python we use thse statements to achieve if conditions..	
+
+		i) 	if....ex-- if a>b :
+
+		ii) 	elif (else if)... in python elif is used instead of else if...
+			if a>b:
+				print(a)
+			elif b>a:
+				print(b)
+
+		iii) 	else.....
+			if a>b:
+				print(a)
+			elif b>a:
+				print(b)
+			else:
+				print("invalid")
+
+
+
+
+						Python Loops
+
+
+
+				  python has two primitive loop commands
+
+		while lopp
+	
+		for loop
+
+	while loop::
+
+		the key word is 'while'
+
+           example:
+		i=1
+		while i<6:
+			print(i)
+			i+=1
+
+		//prints 12345
+
+	break ::
+	
+		the break statement in while loop used to break the function..
+
+		example:
+		
+		i=1
+		while i<6:
+			print(i)
+			if i==3:
+				break
+			i+=1
+
+		//this stops the sequence when reaching 3...1 2 3 (break)
+
+	continue ::
+
+		the continue statement is used to skip the current iteration..
+
+		example:
+			
+		i=0
+		while i<6:
+			i+=1
+			if i==3:
+				continue
+			print(i)
+
+		//this skips the number 3 when encountered..the continue statement is used to skip the current iteration..
+
+
+
+	for loop ::
+
+
+		like every other programming language for loop is used for looping certain statements
+
+		but it has different structure and syntax methods..
+
+		'for' is the keyword used...
+	
+		using for loop we can iterate any python collections..
+
+		example::
+			
+			machines=["car","bike","train","lorry"]
+			
+			for x in machines:
+				print(x)
+
+				//prints car bike train lorry
+
+	break :: the break statement has the same functionality as in the while loop...as breaking the flow at a certain condition..
+
+	continue :: the continue statement has the same functionality as in the while loop as skip a specific iteration in flow..
+
+
+	range  ::
+
+		range is used for specifing the condition or number of itereation of the for loop
+
+		example:
+
+			for x in range(6):
+				print(x)
+					//prints 0 1 2 3 4 5 
+
+			the default starting of the range is 0 
+			the default increment value is 1
+
+		we can change it by giving the range values....
+
+		example:
+
+			for x in range(1,5):
+				print(x)  //prints 1 2 3 4 ..not 5
+
+		the default increment is 1..
+		We can sprcify the increment range by...
+
+		example:
+
+			for x in range(1,30,3):	//the third element specifies the increment by 3
+				print(x)  
+
+	recursion :: 
+		
+		recursive function method also supported by python..
+			
+		the process of a function to call itself again and again to reach a result is called recursive function
+
+
+
+	
+							Python Functions
+
+
+
+		A function is a block of code which is only executed on a function call...
+		
+		we can pass data to a function called parameters...
+
+		we can get the output (return data) from the function called result...
+
+	in python a function is defined using the 'def' keyword...... indentation is must for everything in python
+
+		example:
+		
+			def addition():
+				a=10
+				b=15
+				c=a+b
+				print(c)
+
+			addition() 		//function call		//prints 25
+
+	
+	Parameter Passing::
+	
+		A python function can hold up multiple parameters
+		
+		we should seperate each perameter by using a comma(,)
+
+		example:
+			
+			def addition(x,y):
+				z=x+y
+				print(z)
+
+			addition(10,15)		//function call 	//prints 25
+
+
+	return statement::
+
+		as like as other programming language python supports return statement...
+
+		'return'
+
+		example:
+			
+			def addition(x,y):
+				return x+y
+
+			addition(10,15)		//function call 	//prints 25	
+
+
+	lambda functions::
+			
+		an anonymous function is called as lambda function in python..
+
+		anonymous function is a function which has no names and used for a temporary cause..
+		it can hold multiple parameters but can execute only one expression..
+
+		in python the anonymous functins are defined using the keyword 'lambda'
+
+		example:
+			myfun=lambda i:i*2
+			
+			myfun(2) 		//function call		//prints 4
+
+
+
+
+
+						 Python Array
+
+
+
+
+	Python dont have direct Array Support, instead we can use Lists as Arrays..All the list operations are considered as python Array
+	Operations....
+
+
+
+
+	
+					Python Classes and Objects
+
+
+
+
+
+	Python is an object oriented programming language. It has class and object...A class is an blue print of the object.. Objects are created 
+	for the classes and used to access the class members and methods..
+
+	Class Declaration::
+		
+		class dog:	
+			x=5
+
+	Object Creation::
+
+		d1=dog
+		print(d1.x)					//prints 5
+
+	__init__::
+
+		the __init__ is used to initialize the class members or variables or states of an object
+
+	self ::
+		self is the referance for the class....
+		self means represants itself....
+
+		example:
+	
+			class dog:
+				def __init__(self,name,age):
+					self.name=name
+					self.age=age
+
+			d1=dog("julie",2)
+			print(d1.name,d1.age)			//prints julie 2
+
+		by using the __init__ method we can able to assign and modify and delete the class members or variables or instance...
+
+	delete Object Property ::
+		to delete an object property we need to use the "del" keyword
+
+		example:		
+			del d1.age				//delete the member age for the object d1
+
+	delete Object ::
+		to delete the object completely...
+
+		example:
+			del d1					//deletes the object from the entry
+
+	to modify ::
+		to modify the contents of the members...we use...
+
+		example:
+			d1.age=5				//updates the age as 5 for the object d1
+
+
+
+
+
+						Python Modules
+
+
+
+
+
+	A module in python is a library of codes..we can import the modules into our program whenever needed....
+
+	we need to store the codes as file and give filename extension as .py
+
+
+	Importing a module::
+
+
+		mymodule.py
+
+		import mymodule
+
+
+	a module can have multiple methods and classes and variables in it..we can use them according to our need
+
+	there are lot of predeveloped python libraries are available ...
+
+	to use a method of a module..we can use it like....
+
+	example:
+
+	
+		import mymodule
+	
+		x=mymodule.greetings("ramu")
+
+		print(x)						//prints 'welcome ramu'
+
+	
+
+	import specific method of a module::
+
+
+	we can import a specific method or codefile from a module..
+	
+	keyword is "from"...
+
+		
+		from mymodule import greetings
+
+
+
+	re-naming a module::
+
+		to rename a module,we use the keyword 'as'\
+
+
+	example::
+
+		import mymodule as my
+
+		
+	dir()::
+
+		the dir() used to view the methods encapsulated by the module
+
+	example:
+	
+		import mymodule
+
+		x=dir(mymodule)
+
+		print(x)						//prints the methods in the modules
+
+
+
+
+
+
+							Date and Time in Python
+
+
+
+
+
+	for date and time operations there is a specific module is available in python
+
+	
+	datetime::
+
+		this is module which consist of all the date and time operations
+
+	to view date and time::
+
+	example:
+
+		import datetime
+
+		x=datetime.datetime.now()
+
+		print(x)						//prints 2018-07-09 10:43:29:45362
+
+
+	the datetime module has lots of methods prebuilded,we can use it by just calling them in our functions
+
+
+				
+
+			
+							
+							PIP
+
+
+
+
+			PIP is the package manager for the python packages and modules
+
+
+		we can install and use variuos packages available from internet by using the pip
+
+	
+	to install::
+			
+		to install a new package we use ...
+
+
+		pip install camelcase					//installs the camelcase package
+
+		
+	
+		the PIP allows us to consume various predeveloped packages available on the python index registry ...
+	
+		the PIP can also be upgraded when needed from the cmd prompt
+
+
+
+
+					
+							File Handling
+
+
+
+
+
+	the key method in file handling in python is open()
+
+
+	open()::
+		
+		the open() method has two perameters 'filename' and 'mode'
+
+		there are four different modes for opening a file..
+
+
+		'r'=read mode..opens file for reading..throws error if file does not exist..
+
+		'a'=append mode..opens file for appending..creates new file if it does not exist..
+
+		'w'=write mode..opens file for writing..creates new file if it does not exist..
+
+		'x'=creates file..used to create a new file..throws error if file already exist
+
+		
+		there is another two modes are available,,
+
+		't'=text mode/default mode
+
+		'b'=binary mode/images
+
+
+
+	read() ::
+
+				to read the contents of the file use "r" 
+
+		example:
+			
+			a=open("myfile.txt","r")
+
+			print(a.read())				//prints all the contents of the file
+
+
+				to read specific content of the file
+
+		example:
+
+			a=open("myfile.txt","r")
+
+			print(a.read(5))			//prints 5 letters from the file
+
+
+				to read a single line
+
+		example: 
+
+			a=open("myfile.txt","r")
+
+			print(a.readline())			//prints single line of the file
+			
+			we can read all the lines one by one by using the same command multiple times..
+
+
+				to read all the content using loop
+
+		example:
+		
+			a=open("myfile.txt","r")
+
+			for i in a:
+
+				print(i)			//prints all the content
+
+	
+
+	write() ::
+
+		
+					to write into a file use "w" or "a"
+
+
+			"a" adds new content with the existing content
+
+			"w" removes existing content and writes the new content (overrites)
+
+			
+					using "w" (overrites if anything exists)
+
+
+		example:
+
+			a=open("myfile.txt","w")
+
+			a.write("hi i have deleted the content of this file")		//removes existing content and writes new content
+
+
+				
+					using "a" (adds the new content with the existing content)
+
+
+		example:
+	
+			a=open("myfile.txt","a")
+		
+			a.write("im adding this new line  to the file")			//adds the new content to the file
+
+
+
+		
+		
+						to create a new file
+
+
+
+				to create a new file we are using "x" "w" "a"
+
+			"x" to create a new file , returns error if file already exists
+
+			"w" to write into a file , creates new file if file does not exist
+
+			"a" to write into a file , creates new file if file does not exist
+
+
+	craete()::
+
+
+		example:
+	
+			a=open("myfile.txt","x")					//creates new file ,thorows error if already exist
+
+			
+		example:
+
+			a=open("myfile.txt","w")					//creates new file, if file does not exist
+
+		
+		example:
+
+			a=open("myfile.txt","a")					//creates new file if file does not exist
+
+
+
+					
+						to Delete a file
+
+				to delete a file, we must import the "os"
+
+	delete()::
+
+
+		example:
+
+			import os
+
+		os.remove()::
+	
+			example:
+			
+				os.remove("myfile.txt")					//removes the file
+
+
+			to check before deleting a files
+
+		example:
+
+
+			a=open("myfile.txt","w")
+	
+			if os.path.exists("myfile.txt"):
+	
+				os.remove("myfile.txt")
+	
+			else:
+				print("file does not exists")	
+
+
+
+				to delete a folder
+
+
+	or.rmdir()::
+
+		example:
+			
+			os.rmdir("myfolder")						/deletes the entire folder
+
+
+			you can remove only empty folders
+
+
+
+
+
+							Memory Management in Python
+
+
+
+
+	Memory management in python is managed by a private heep which controls all the objects and data structures..the management of this 
+	private heep is ensured by the Python memory manager....
+	
+
+	In python the objects are managed using a reference count system..the memory will be freed when the reference count falls to zero...
+
+
+
+	premitive data types in python..
+	
+	int
+	long
+	float
+	string
+	list
+	tuple
+	dictionary
+	class
+
+
+	every python object holds three things....
+
+	it's type
+	it's value
+	it's reference count
+
+
+	Garbage collection:
+
+		if a memory used by an object is not in use then the program will automatically
+	release the memory is called garbase collection..
+
+	two main types of garbase collection...
+
+		1.refrence counting
+		2.tracing
+
+	python uses...
+		reference counting + generational
+
+	python maintains a list of every object created as a program is run..
+
+	generation 0
+		
+	generation 1
+	
+	generation 2
+
+
+	the newly created objects are stored in generation 0...
+
+	when threshold to a generation is reaches,python runs a garbase collection
+	algorithm on the generation and the younger generation...
+
+	what the garbase collection algorithm do....
+		
+	1.python makes a list for objects to discard
+	2.it calculates the reference count or cycle..
+	3.the objects with 0 reference count are added to discard
+	4.when cycle is done it frees up the objects on the discard list..
+
+
+	GIL::Global interpreter lock
+
+		only one thread can run in interpreter at a time	 
+
+
+		so...every values are considered as an object in python..every objects has unique id in python..
+	and there is no variables in python rather than they are just names or tags that referring that object in python..
+
+	so when we are having a value 10 (it is basically an object 10 in python).. so now if u are creating like this 
+
+	a=10
+	b=10
+		then you are just referencing two different names to the same object in python...so the 10 will be same..there
+	will be only one 10...but the value is referenced by two different names...so the memory address will be same...but if u are doing this
+
+	a=10
+	b=10
+	a+=1  //here a=11
+		now the object 11 is created with unique id..so now a will be referenced to this id and a and b will ahve different id....
+	this is all managed by using the reference count system in python...each time we reference a name to an object ..the reference count is increased..
+	each time you del a reference to an object the reference count is decreased...so when reference count to an object is equals to zero that object is 
+	put into garbage collection and immedietly removed from memory...and similarly this is not the case all the time.becuase python keeps a range
+	for every kind of data types in python..for example int has range of [-5 to 256] when the value is exeding this range then python gives unique ids 
+	to that names.
+		a=500
+		b=500
+		now id(a) is unique
+		and id(b) is unique..
+
+	the same method is applied to string too...
+
+	python handles string on this situation by using the interning concept...
+
+
+
+	Shallow vs Deep copy::
+
+		Shallow Copy:
+
+			Shallow copy in python can be performed by importing the Copy module and by using the copy() method
+
+			import copy
+
+			OriginalList=[1,2,3,4]
+			
+			Copylist=copy.copy(OriginalList)
+
+
+			shallow copy means the process of making reference..here the Copylist is referenced to the Object that Originallist has..
+		so any changes that made in anyone of the Variables will refelect in both..we are just copying the main object reference to the new variable
+		so any changes made will reflect on all the references..
+
+		
+		Deep Copy:
+
+			Deep copy in python can be performed by importing the copy module and by using the deepcopy() method
+
+			import copy
+
+			Originallist=[1,2,3,4,5]
+		
+			Copylist=copy.deepcopy(OriginalList)
+
+
+			When a deep copy is performed the new variable gets indipendant elements from the original object...so now here original object
+		has its independant elements same way the copied object has its independant elements..any changes made in any one of the objects will not
+		be reflected on any objects...
+
+
+		so,,,,finally a shallow copy is just a reference to an original object .... it has no independant elements...any changes made in any one of 
+		the objects will refelect in all the copies...
+			
+		but in deepcopy, a new object with same credentials and elements is created..every copy has its independant elments..any changes made in any 
+		one of the copies will not reflect in any other copies...
+
+		so...
+
+		shallow copy	::::is just reference....no independant elements  //import copy ----- copy.copy()
+
+		deep copy	:::::::creates new objects....independant elements   //import copy ----- copy.deepcopy()
+
+		
+
+			
+
+		
